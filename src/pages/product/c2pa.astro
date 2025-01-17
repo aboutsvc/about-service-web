@@ -11,9 +11,11 @@ import Pricing from '~/components/widgets/Pricing.astro';
 import { headerData } from '~/navigation';
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import BlogTagPosts from '~/components/widgets/BlogTagPosts.astro';
+
 
 const metadata = {
-  title: 'SaaS Landing Page',
+  title: 'AboutC2PA',
 };
 ---
 
@@ -40,7 +42,7 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="SaaS Web Demo"
+    tagline="About C2PA"
     actions={[
       { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
       { text: 'Learn more', href: '#features' },
@@ -337,13 +339,14 @@ const metadata = {
 
   <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
+  <BlogTagPosts
     id="blog"
     title="Stay informed with AstroWind's blog"
+    tag="tailwind-css"
     information={`Explore our collection of articles, guides, and tutorials on web development, design trends, and using AstroWind effectively for your projects.`}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </BlogLatestPosts>
+  </BlogTagPosts>
 </Layout>
