@@ -1,5 +1,5 @@
 site:
-  name: AboutService
+  name: About Service
   site: 'https://aboutsvc.com'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AboutService
-    template: '%s — AboutService'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: About Service
+    template: '%s — About Service'
+  description: "Innovating Business Solutions with AI and Software Expertise"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AboutService
+    site_name: About Service
     images:
       - url: '~/assets/images/default.png'
         width: 1200

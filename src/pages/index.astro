@@ -13,9 +13,12 @@ import Brands from '~/components/widgets/Brands.astro';
 
 import { getPermalink, getBlogPermalink, getAsset } from '../utils/permalinks';
 import { YouTube } from 'astro-embed';
+import Content from '~/components/widgets/Content.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+
 
 const metadata = {
-  title: 'AboutService | Innovating Business Solutions with AI and Software Expertise',
+  title: 'About Service | Innovating Business Solutions with AI and Software Expertise',
   ignoreTitleTemplate: true,
 };
 ---
@@ -205,6 +208,83 @@ const metadata = {
     ]}
   />
 
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Showcases"
+    id="showcases"
+    subtitle="Discover how About Service's innovative software solutions empower users with unique functionalities, saving time and resources while enhancing productivity."
+    isReversed
+    items={[
+      {
+        title: 'Description:',
+        description:
+          "Tired of repetitive calculations? VarsCalculator transforms the way you approach mathematical expressions. Designed with everyday users and professionals in mind, VarsCalculator allows users to create, save, and reuse custom formulae using variables like X, Y, and Z. Whether it's budgeting, engineering, or daily numerics, this app streamlines any computation process with its variable-based approach.",
+      },
+      {
+        title: 'Benefits:',
+        description: `Simplifies complex calculations by enabling variable-based formula save and reuse. <br />
+Save time by adjusting variables (X, Y, Z) to instantly obtain results for similar computations.<br />
+Retrieve past calculations seamlessly with the app's convenient history feature.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/vars-calculator.png',
+      alt: 'VarsCalculator Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        App showcase:<br /><span class="text-2xl">Revolutionizing calculations with VarsCalculator</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent={false}
+    items={[
+      {
+        title: 'Description:',
+        description: `For businesses creating digital content, ensuring authenticity and trust can be time-consuming and complex. AboutC2PA simplifies applying C2PA (Coalition for Content Provenance and Authenticity) standards through its comprehensive SDK and SaaS platform. By automating key generation, signing processes, and history management, AboutC2PA minimizes the technical burden, enabling companies to focus on core business goals.`,
+      },
+      {
+        title: 'Benefits:',
+        description: `Save time with AboutC2PA's easy-to-integrate SDK that handles complex C2PA specifications seamlessly. <br />
+Reduce costs by eliminating the need for extensive in-house development to achieve C2PA compliance. <br />
+Ensure content reliability without uploading original files, safeguarding sensitive data during the signing process.<br />
+Enable flexible, purpose-specific key management and multi-platform compatibility (web, Android, iOS).`,
+      },
+    ]},
+    image={{
+      src: '~/assets/images/c2pa-logo.jpg',
+      alt: 'AboutC2PA Image',
+    }},
+
+  >
+  <!-- callToAction= {{
+    variant: "secondary",
+    text: 'Learn more',
+    href: getPermalink('/product/c2pa'),
+  }}, -->
+  
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        SaaS showcases: <br /><span class="text-2xl">Elevating content integrity with AboutC2PA</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+
   <!-- FAQs Widget ******************* -->
 
   <FAQs
@@ -242,9 +322,9 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="bg">
+    <!-- <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+    </Fragment> -->
   </FAQs>
 
   <!-- Features3 Widget ************** -->

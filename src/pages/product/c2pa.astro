@@ -1,68 +1,48 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Features from '~/components/widgets/Features.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Content from '~/components/widgets/Content.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 
-import { headerData } from '~/navigation';
+
 import FAQs from '~/components/widgets/FAQs.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import BlogTagPosts from '~/components/widgets/BlogTagPosts.astro';
 
-
 const metadata = {
-  title: 'AboutC2PA',
+  title: 'AboutC2PA — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="header">
-    <Header
-      {...headerData}
-      actions={[
-        {
-          variant: 'secondary',
-          text: 'Login',
-          href: '#',
-        },
-        {
-          variant: 'primary',
-          text: 'Sign Up',
-          href: '#',
-        },
-      ]}
-      isSticky
-    />
-  </Fragment>
 
   <!-- Hero2 Widget ******************* -->
-
   <Hero2
-    tagline="About C2PA"
+    tagline="AboutC2PA"
     actions={[
       { variant: 'primary', target: '_blank', text: 'Get Started', href: 'https://github.com/onwidget/astrowind' },
       { text: 'Learn more', href: '#features' },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1580481072645-022f9a6dbf27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'AstroWind Hero Image',
+      src: '~/assets/images/c2pa-logo.jpg',
+      alt: 'C2PA Image',
     }}
   >
     <Fragment slot="title">
-      Simplify web design with Astrowind: <br /> your ultimate <span class="text-accent dark:text-white highlight"
-        >SaaS</span
-      > companion<br />
+      Sign Digital Content Seamlessly with AboutC2PA: <br /> your ultimate <span class="text-accent dark:text-white highlight"
+        >C2PA SaaS</span
+      > Solution<br />
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Elevate your website creation process with <span class="font-semibold">AstroWind</span>'s SaaS solutions.</span
+        Streamline your content authentication process with <span class="font-semibold">AboutC2PA</span>'s powerful SaaS solutions.</span
       >
-      Seamlessly blend the power of Astro 5.0 and Tailwind CSS to craft websites that resonate with your brand and audience.
+      Effortlessly manage C2PA signing keys, securely sign resources without content uploads, and integrate seamlessly across platforms like web, Android, and iOS to ensure trusted and verified digital content.
     </Fragment>
   </Hero2>
 
@@ -70,40 +50,40 @@ const metadata = {
 
   <Features
     id="features"
-    title="Why choose AstroWind?"
-    subtitle="Each of the following features enhances AstroWind's value proposition."
+    title="Why choose AboutC2PA?"
+    subtitle="Each of the following features enhances AboutC2PA's value as the ultimate C2PA signing solution."
     columns={2}
     items={[
       {
-        title: 'Integration of Astro 5.0 and Tailwind CSS',
+        title: 'Effortless integration and complexity management with the SDK',
         description:
-          'Offers a powerful combination that enhances both the development process and the end-user experience. Also, allows to build dynamic and visually stunning websites with optimized performance.',
+          "AboutC2PA's powerful SDK simplifies the implementation of C2PA specifications, removing the hassle of managing complexities. Developers can save time and focus on their business logic while ensuing seamless integration into workflows across web, iOS, Android, and more.",
         icon: 'tabler:layers-union',
       },
       {
-        title: 'Versatile design for startups, small businesses, and more',
-        description: `Easily customize AstroWind to harmonize with the unique branding and identity of your venture. AstroWind's versatile design adapts to suit your needs.`,
+        title: 'Build trust through verified and reliable content',
+        description: `Your products and content deserve to shine as trustworthy and authentic. AboutC2PA ensures the content you create is signed and seamlessly integrated into various platforms, making it instantly recognizable as reliable. Enhance your brand's credibility by delivering verified content to your audience.`,
         icon: 'tabler:artboard',
       },
       {
-        title: 'Effortless customization for portfolios and marketing sites',
+        title: 'Multi-platform support for maximum flexibility',
         description:
-          'With intuitive customization, easily showcase portfolio pieces, case studies, project highlights, and relevant content. Ideal for creative professionals and businesses looking to highlight their expertise.',
+          "Whether it's web-based applications or mobile platforms like Android and iOS, AboutC2PA's multi-platform compatibility ensures that your signed content looks consistent and secure across all channels. Broaden your reach without any technical limitations.",
         icon: 'tabler:writing',
       },
       {
-        title: 'Optimized landing pages and engaging blogs',
-        description: `Landing pages are strategically designed to captivate visitors and prompt specific actions. Additionally, the blog creation feature empowers sharing insights, engaging the audience.`,
+        title: 'Secure signing without content uploads',
+        description: `Prioritizing your content security, AboutC2PA eliminates the need for original files to be uploaded to servers. By extracting only the necessary metadata and thumbnails for signing, your content remains protected from leaks or unauthorized access.`,
         icon: 'tabler:podium',
       },
       {
-        title: 'Fast loading times and production-ready code',
-        description: `Using Astro 5.0 ensures fast loading and seamless rendering, enhancing browsing. The code follows best practices, improving user experience, SEO, and reducing bounce rates.`,
+        title: 'Flexible signing options for diverse needs',
+        description: `From issuing multiple signing keys to tailoring signer identities for specific purposes, AboutC2PA adapts to your business requirements. Whether you're managing corporate assets, creative portfolios, or SaaS content, the platform offers full customization to suit your project goals.`,
         icon: 'tabler:rocket',
       },
       {
-        title: 'SEO-optimized structure for enhanced visibility',
-        description: `Follows SEO best practices with clean code, semantic HTML markup, and fast loading, enhancing search engine rankings. AstroWind's SEO structure ensures visibility to potential customers and clients.`,
+        title: 'Scalable solutions for businesses of all sizes',
+        description: `Start with the free version to experience AboutC2PA's capabilities or upgrade to the paid version for advanced features like multiple signing keys and custom signer identities. AboutC2PA grows with your business, ensuring secure and reliable digital content at every stage.`,
         icon: 'tabler:eyeglass',
       },
     ]}
@@ -113,17 +93,21 @@ const metadata = {
 
   <Content
     title="Use cases"
-    subtitle="Discover how AstroWind's versatile template serves as the ideal solution for various use cases, providing tailored solutions to drive success."
+    id="usecases"
+    subtitle="Discover how AboutC2PA revolutionizes digital content authentication with versatile solutions tailored to diverse industries and needs."
     isReversed
     items={[
       {
         title: 'Description:',
         description:
-          'Are you a startup with big dreams? AstroWind propels your success. Our template forges a seamless online presence, attracting investors and customers from day one. Astro 5.0 and Tailwind CSS ensure striking, responsive sites, leaving lasting impressions. Countless startups leverage AstroWind to kickstart their journey and resonate with audiences.',
+          'Are you a content creator who wants to safeguard your work and maintain its authenticity? AboutC2PA empowers you to establish ownership by securely signing your digital content with C2PA standards. Creators from industries like multimedia, photography, and design rely on AboutC2PA to protect their creative assets and build credibility with their audience.',
       },
       {
         title: 'Benefits:',
-        description: `Allow startups to quickly create professional websites without investing extensive time and resources. <br /> Make a memorable first impression with visually appealing design elements that highlight your startup's unique value proposition. <br /> Ensures your website looks stunning and works well on all devices. <br /> Engage potential investors and customers with engaging content, clear messaging, and intuitive navigation.`,
+        description: `Effortless signing without uploading content to the server, ensuring maximum privacy. <br />
+Showcase authenticity to your audience with verified digital assets.<br />
+Prevent unauthorized edits or misuse of your creative work.<br />
+Seamlessly integrate signing tools into your production flow using an intuitive SDK.`,
       },
     ]}
     image={{
@@ -133,7 +117,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Startup success stories: <br /><span class="text-2xl">Launching with AstroWind</span>
+        Content Creators:<br /><span class="text-2xl">Building trust with AboutC2PA</span>
       </h3>
     </Fragment>
 
@@ -149,11 +133,14 @@ const metadata = {
     items={[
       {
         title: 'Description:',
-        description: `For SaaS businesses, user experience is key. AstroWind enhances showcasing SaaS solutions intuitively. The template's Astro 5.0 and Tailwind CSS integration guarantees user-friendly experience, mirroring your software's efficiency. Customize pages to communicate SaaS value and solutions for your audience.`,
+        description: `For SaaS businesses, offering secure and authenticated content matters. AboutC2PA ensures that the communication and digital assets shared by your application are trusted and tamper-proof. Safeguard your brand while enhancing user confidence with a streamlined C2PA signing process tailored for SaaS solutions.`,
       },
       {
         title: 'Benefits:',
-        description: `Ensuring a cohesive and user-centric design for your SaaS website. <br /> Effectively communicate complex SaaS features through visual aids, animations, and interactive elements. <br /> Prioritize user needs and pain points through well-structured layouts and clear navigation. <br /> Encourage visitors to take action with strategically placed CTAs. <br /> Ensures your SaaS website works seamlessly across all devices.`,
+        description: `Boost your SaaS product’s reputation by delivering secure, authenticated assets. <br />
+Protect sensitive documentation or resources shared with users from tampering. <br />
+Simplify content verification workflows for customer communications.<br />
+Integrate signing capabilities directly within your SaaS platform through flexible SDKs.`,
       },
     ]}
     image={{
@@ -163,7 +150,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        SaaS showcase: <br /><span class="text-2xl">Streamlining user experience</span>
+        SaaS Businesses: <br /><span class="text-2xl">Enhancing credibility and security with AboutC2PA</span>
       </h3>
     </Fragment>
 
@@ -180,11 +167,14 @@ const metadata = {
     items={[
       {
         title: 'Description:',
-        description: `Your portfolio is your masterpiece, and AstroWind is your canvas. Whether you're a designer, photographer, artist, or any other creative professional, AstroWind empowers you to showcase your work with elegance and sophistication. Tailored to highlight your creative projects, AstroWind's templates offer a visually immersive experience that lets your portfolio shine.`,
+        description: `Creative professionals like designers, artists, and photographers often face the challenge of unauthorized use of their work. AboutC2PA allows you to securely sign your portfolio pieces, ensuring they remain uniquely yours. Make an impression with verified, authoritative digital content while protecting your creative efforts.`,
       },
       {
         title: 'Benefits:',
-        description: `Serve as a captivating backdrop to showcase your creative work, capturing attention and leaving a lasting impression. <br /> Tailor your portfolio to reflect your unique style and artistic vision. <br /> Prioritizes visuals, allowing you to present your work in high-resolution detail that draws viewers into your creations. <br /> Enables seamless navigation for effortless portfolio exploration.`,
+        description: `Authenticate your portfolio with signed digital content to prevent unauthorized usage. <br/>
+Showcase your projects with confidence, backed by secure ownership.<br/>
+Reflect your unique identity and professionalism through trusted content.<br/>
+Easily integrate signing into your daily creative workflow without compromising productivity.`,
       },
     ]}
     image={{
@@ -194,7 +184,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Creative portfolios: <br /><span class="text-2xl">Highlighting your work</span>
+        Creative portfolios: <br /><span class="text-2xl">Showcasing verified work with AboutC2PA</span>
       </h3>
     </Fragment>
 
@@ -209,11 +199,14 @@ const metadata = {
     items={[
       {
         title: 'Description:',
-        description: `For small businesses, a well-crafted website can be a game-changer. AstroWind empowers small businesses to not only establish a credible online presence but also convert visitors into loyal customers. The template's thoughtful design and optimization features ensure that your website doesn't just attract attention but also guides visitors through a seamless journey, ultimately leading to conversions.`,
+        description: `Small businesses can build confidence with their audience using authenticated content. Whether it’s engaging marketing materials, trustworthy documentation, or secure product assets, AboutC2PA helps small businesses present themselves as professional and reliable.`,
       },
       {
         title: 'Benefits:',
-        description: `Present your small business with a professional and polished website that instills confidence and trust among visitors. <br /> Strategically placed CTAs, user-friendly forms, and optimized layouts work together to drive user engagement and conversions. <br /> Ensure a smooth browsing experience, reducing bounce rates and encouraging interaction.`,
+        description: `Sign and protect your digital assets to prevent misuse or manipulation.<br />
+Build trust with customers by delivering verified and authentic content.<br />
+Simplify content protection without requiring advanced technical skills.<br />
+Ensure a scalable solution that grows with your business needs.`,
       },
     ]}
     image={{
@@ -223,7 +216,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Small business growth: <br /><span class="text-2xl">Converting visitors into customers</span>
+        Small Businesses: <br /><span class="text-2xl">Protecting and promoting with AboutC2PA</span>
       </h3>
     </Fragment>
 
@@ -234,7 +227,7 @@ const metadata = {
 
   <!-- Pricing Widget ******************* -->
 
-  <Pricing
+  <!-- <Pricing
     title="Flexible pricing plans"
     prices={[
       {
@@ -273,40 +266,51 @@ const metadata = {
         },
       },
     ]}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
+    id="faq"
     items={[
       {
-        title: 'Is AstroWind compatible with the latest versions of Astro and Tailwind CSS?',
+        title: 'Is AboutC2PA compatible with all platforms?',
         description:
-          'Yes, AstroWind is designed to be compatible with the latest versions of both Astro and Tailwind CSS. This ensures that you can harness the full capabilities of these technologies while benefiting from the features offered by AstroWind.',
+          'Yes, AboutC2PA is designed to work seamlessly across multiple platforms, including web, Android, iOS, and more. Its SDK ensures smooth integration, allowing you to use it in your preferred environment without limitations.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Can I use AstroWind for both personal and commercial projects?',
-        description: `Certainly! AstroWind is versatile and can be used for a wide range of projects, including both personal and commercial endeavors. Whether you're building a professional portfolio, launching a startup, or creating a marketing website, AstroWind has you covered.`,
+        title: 'Can I use AboutC2PA for both personal and commercial purposes?',
+        description: `Certainly! AboutC2PA is flexible and can be used for personal and commercial projects alike. Whether you're a content creator protecting your work or an enterprise ensuring content authenticity, AboutC2PA has the tools to meet your needs.`,
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'What level of coding knowledge is required to use AstroWind?',
+        title: 'Do I need advanced technical knowledge to use AboutC2PA?',
         description:
-          'While some familiarity with HTML, CSS, and web development concepts is helpful, the user-friendly interface and customization options allow those with limited coding experience to create impressive websites. For more advanced users, AstroWind offers extensive customization capabilities.',
+          'Not at all! AboutC2PA’s intuitive interface and SDK make it easy to get started, even for users with limited technical expertise. For developers and advanced users, AboutC2PA offers extensive customization options to fit complex workflows.',
         icon: 'tabler:chevrons-right',
       },
       {
-        title: 'Is customer support available for AstroWind users seeking guidance?',
-        description: `Absolutely, our dedicated customer support team is here to assist you with any questions or challenges you may encounter. Feel free to reach out to us through our support channels, and we'll be happy to provide the help you need.`,
+        title: 'Does AboutC2PA require me to upload my content to the server?',
+        description: `No, AboutC2PA ensures your content remains secure by not requiring uploads to its server. All signing processes occur locally, preventing any risk of content leakage or unintended exposure.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'What are the differences between the free and paid versions of AboutC2PA?',
+        description: `The free version allows you to use one signing key issued by About Service Inc. with a fixed signer identity. The paid version offers advanced features, including multiple signing keys, customizable signing identities, and tailored management for diverse signing needs.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: 'Is customer support available for AboutC2PA users?',
+        description: `Absolutely! Our dedicated customer support team is available to assist with any questions, technical issues, or guidance needed to maximize your use of AboutC2PA. Feel free to contact us anytime through our support channels.`,
         icon: 'tabler:chevrons-right',
       },
     ]}
   >
-    <Fragment slot="bg">
+    <!-- <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+    </Fragment> -->
   </FAQs>
 
   <!-- Steps2 Widget ****************** -->
@@ -321,21 +325,21 @@ const metadata = {
     items={[
       {
         title: 'Email us',
-        description: 'contact@support.com',
+        description: 'support@aboutsvc.com',
         icon: 'tabler:mail',
       },
       {
         title: 'Call us',
-        description: '+1 (234) 567-890',
+        description: '+82 (10) 9273-0777',
         icon: 'tabler:headset',
-      },
-      {
-        title: 'Follow us',
-        description: '@example',
-        icon: 'tabler:brand-twitter',
-      },
+      }
     ]}
-  />
+    
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Steps2>
 
   <!-- BlogLatestPost Widget **************** -->
 
