@@ -11,7 +11,7 @@ export const headerData = {
         },
         {
           text: 'VarsCalculator',
-          href: 'https://aboutsvc.github.io/vars-calculator-web-v2/',
+          href: 'https://vars-calculator.aboutsvc.com/',
         },
       ],
     },
@@ -42,7 +42,7 @@ export const footerData = {
         },
         {
           text: 'VarsCalculator',
-          href: 'https://aboutsvc.github.io/vars-calculator-web-v2/',
+          href: 'https://vars-calculator.aboutsvc.com/',
         },
       ],
     },
