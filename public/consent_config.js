@@ -174,7 +174,10 @@ var klaroConfig = {
       // cookies set by this service. If the user withdraws consent for a
       // given service, Klaro will then automatically delete all matching
       // cookies.
-      cookies: [/^_ga/, /^_gid/, /^_gat/],
+      cookies: [
+        /^_ga/, // Universal Analytics & GA4
+        /^_ga_[\w]+/, // GA4 (e.g., _ga_XXXXXXXXXX)
+      ],
 
       // If "required" is set to true, Klaro will not allow this service to
       // be disabled by the user.
@@ -188,6 +191,7 @@ var klaroConfig = {
       // If "onlyOnce" is set to true, the service will only be executed
       // once regardless how often the user toggles it on and off.
       onlyOnce: true,
+
       callback: function (consent, service) {
         window.dataLayer = window.dataLayer || [];
         window.gtag = function () {
@@ -198,13 +202,6 @@ var klaroConfig = {
           gtag('consent', 'update', {
             ad_storage: 'granted',
             analytics_storage: 'granted',
-            ad_user_data: 'granted',
-            ad_personalization: 'granted',
-          });
-        } else {
-          gtag('consent', 'update', {
-            ad_storage: 'denied',
-            analytics_storage: 'denied',
             ad_user_data: 'denied',
             ad_personalization: 'denied',
           });
