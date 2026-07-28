@@ -13,6 +13,10 @@ export const headerData = {
           text: 'VarsCalculator',
           href: 'https://vars-calculator.aboutsvc.com/',
         },
+        {
+          text: 'My Opic Story',
+          href: 'https://my-opic-story.aboutsvc.com/',
+        },
       ],
     },
     {
@@ -43,6 +47,10 @@ export const footerData = {
         {
           text: 'VarsCalculator',
           href: 'https://vars-calculator.aboutsvc.com/',
+        },
+        {
+          text: 'My Opic Story',
+          href: 'https://my-opic-story.aboutsvc.com/',
         },
       ],
     },

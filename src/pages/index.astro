@@ -285,6 +285,38 @@ Enable flexible, purpose-specific key management and multi-platform compatibilit
     </Fragment>
   </Content>
 
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Description:',
+        description: `Preparing for the OPIc English speaking test is stressful—learners often struggle to think of what to say. My Opic Story turns a single photo and a short note about your experience into a personalized OPIc question and model answer script, powered by AI. Instead of memorizing generic answers, users practice with responses built from their own stories.`,
+      },
+      {
+        title: 'Benefits:',
+        description: `Generate a tailored OPIc question and model answer from just a photo and a short description. <br />
+Match every script to your English level and target grade (IM, IH, AL). <br />
+Save generated scripts and review them anytime in one place. <br />
+Earn credits for free by watching ads—practice as much as you need.`,
+      },
+    ]}
+    image={{
+      src: '~/assets/images/my-opic-story.png',
+      alt: 'My Opic Story Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        App showcase: <br /><span class="text-2xl">Personalized OPIc scripts with My Opic Story</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <!-- FAQs Widget ******************* -->
 
